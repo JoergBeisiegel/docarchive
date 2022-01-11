@@ -1,0 +1,52 @@
+
+	<section id="content">
+		<h2>__#__H2__#__</h2>
+		<!-- Main content -->
+
+		<form action='' method='post'>
+			<input type='hidden' name='userForm' value='searchDocuments' />
+	<fieldset>
+		<legend>Suche nach:</legend>
+	
+		<label>Titel: </label>
+		<input type='text' name='document_title' placeholder='Suchtext eingeben' value="__#__DOCUMENT_TITLE__#__" />
+		<br />
+		<br />
+	
+		<label>Beschreibung: </label>
+		<input type='text' name='document_description' placeholder='Suchtext eingeben' value="__#__DOCUMENT_DESCRIPTION__#__" />
+		<br />
+		<br />
+	
+		<label>Kategorien auswählen: </label>
+		<select name='category_ids[]' multiple>__#__CATEGORYLIST__#__
+		</select>
+		<br/ >
+		<br/ >
+		<span class="error">__#__SEARCH_ERROR__#__</span>
+		<br />
+		<input type='submit' value='Suchen' />
+	</fieldset>
+			<br />
+			<hr />
+			<br />
+		
+			<div class="browseDocuments">
+
+				<div>
+					<div class="documentTitle"><b>Titel</b></div>
+					<div class="documentDescription"><b>Beschreibung</b></div>
+					<div class="documentName"><b>Name</b></div>
+					<div class="creationDate"><b>Erstellungsdatum</b></div>
+					<div class="categories"><b>Kategorien</b></div>
+					<div class="selection"><b>Aktion</b></div>
+				</div>
+				<div class="clearer"></div>
+				<br />
+__#__BROWSEDOCUMENTS_LIST__#__
+			</div>
+
+			</fieldset>
+		</form>
+	</section>
+

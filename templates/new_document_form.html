@@ -1,0 +1,38 @@
+<h2>__#__H2__#__</h2>
+<form action='' method='POST' enctype="multipart/form-data">
+	<input type='hidden' name='userForm' value='newDocument' />
+	<input type='hidden' name='document_id' value='__#__DOCUMENT_ID__#__' />
+	<fieldset>
+		<legend>Eigenschaften festlegen</legend>
+
+		<span class="error">__#__DOCUMENT_TITLE_ERROR__#__</span><br />
+		<label>Titel: </label>
+		<input type='text' name='document_title' placeholder='Titel' value="__#__DOCUMENT_TITLE__#__" />
+		<span class="marker"> *</span>
+		<br />
+		<br />
+
+		<span class="error">__#__DOCUMENT_DESCRIPTION_ERROR__#__</span><br />
+		<label>Beschreibung: </label>
+		<textarea name='document_description' placeholder='Beschreibung'>__#__DOCUMENT_DESCRIPTION__#__</textarea>
+		<span class="marker"> *</span>
+		<br />
+		<br />
+
+		<span class="error">__#__CATEGORY_IDS_ERROR__#__</span><br />
+		<label>Kategorien auswählen: </label>
+		<span class="marker"> *</span>
+		<br />
+		<select name='category_ids[]' multiple>__#__CATEGORYLIST__#__
+		</select>
+		<br />
+		<fieldset name="uploadedDocument">
+			<legend>Dokument hochladen</legend>
+			<br>
+			<br>
+			<input type="file" name="uploadedDocument">
+		</fieldset>
+		<br >
+		<input type='submit' value='Speichern' />
+	</fieldset>
+</form>

@@ -1,0 +1,50 @@
+<h2>__#__H2__#__</h2>
+<form action='' method='POST' enctype="multipart/form-data">
+	<input type='hidden' name='userForm' value='editDocument' />
+	<input type='hidden' name='document_id' value='__#__DOCUMENT_ID__#__' />
+	<fieldset>
+		<legend>Eigenschaften festlegen</legend>
+		
+		<div id="pdf">
+			<object
+				height="500px" width="40%" type="application/pdf" quality="low" 
+				data="__#__DOCUMENT_NAME__#__#page=1&view=fitH&scrollbar=0&toolbar=0&navpanes=0&pagemode=none&zoom="
+				id="pdf_content">
+			</object>
+		</div>
+		<span class="error">__#__DOCUMENT_TITLE_ERROR__#__</span>
+		<br />
+		<label>Titel: </label>
+		<span class="marker"> *</span>
+		<input type='text' name='document_title' placeholder='Titel' value="__#__DOCUMENT_TITLE__#__" />
+		<br />
+		<br />
+	
+		<span class="error">__#__DOCUMENT_DESCRIPTION_ERROR__#__</span>
+		<br />
+		<label>Beschreibung: </label>
+		<span class="marker"> *</span>
+		<textarea name='document_description' placeholder='Beschreibung'>__#__DOCUMENT_DESCRIPTION__#__</textarea>
+		<br />
+		<br />
+	
+		<span class="error">__#__CATEGORY_IDS_ERROR__#__</span>
+		<br />
+		<label>Kategorien auswählen: </label>
+		<span class="marker"> *</span>
+		<br />
+		<select name='category_ids[]' multiple>__#__CATEGORYLIST__#__
+		</select>
+		<br />
+		<fieldset name="uploadedDocument">
+			<legend>Dokument hochladen</legend>
+			<br>
+			<br>
+			<input type="file" name="uploadedDocument">
+			<input type="text" name="document_name" value="__#__DOCUMENT_NAME__#__" readonly>
+		</fieldset>
+		<br>
+		<input type='submit' value='Abbrechen' name='button' />
+		<input type='submit' value='Speichern' name='button' />
+	</fieldset>
+	</form>

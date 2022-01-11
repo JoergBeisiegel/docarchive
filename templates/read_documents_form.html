@@ -1,0 +1,36 @@
+<h2>__#__H2__#__</h2>
+<form action='' method='POST' enctype="multipart/form-data">
+	<input type='hidden' name='userForm' value='readDocuments' />
+	<fieldset>
+		<div id="pdf">
+			<object height="200px" width="200px" type="application/pdf" quality="low" data="documents/Velux_KUX_100_7753.pdf#page=1&view=fitH&scrollbar=0&toolbar=0&navpanes=0&pagemode=none"
+				id="pdf_content">
+				<p>Insert your error message here, if the PDF cannot be displayed.</p>
+			</object>
+		</div>
+		<legend>Eigenschaften festlegen</legend>
+
+		<input type='text' name='document_title' placeholder='Titel' />
+		<br />
+
+		<textarea name='document_description' placeholder='Beschreibung'></textarea>
+		<br />
+
+		<label>Kategorien auswählen: </label>
+		<br />
+		<select name='category_ids[]' multiple>__#__OPTIONLIST__#__
+		</select>
+		<br />
+		<fieldset name="uploadedDocument">
+			<legend>Dokument hochladen</legend>
+			<br>
+			<span class="error">
+				<?php echo $errorImageUpload ?>
+			</span>
+			<br>
+			<input type="file" name="uploadedDocument">
+		</fieldset>
+		<br>
+		<input type='submit' value='Speichern' />
+	</fieldset>
+</form>
